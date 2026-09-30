@@ -1,0 +1,47 @@
+{
+  "name": "handover-check",
+  "version": "1.0.0",
+  "description": "Check whether another team could take a software product over from its repository: how to run it, settings, lock files, tests, a build pipeline, a runbook, the environment as code, committed secrets and written decisions. Reads a folder, fetches nothing, no dependencies.",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "handover-check": "bin/handover-check.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "docs",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test \"test/*.test.js\"",
+    "test:coverage": "node --test --experimental-test-coverage \"test/*.test.js\"",
+    "check": "node tools/check.mjs",
+    "example": "node bin/handover-check.js examples/booking-product"
+  },
+  "keywords": [
+    "handover",
+    "outsourcing",
+    "vendor-exit",
+    "repository",
+    "due-diligence",
+    "software-product",
+    "audit",
+    "cli"
+  ],
+  "author": "INNERLUXES <info@innerluxes.dev>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INNERLUXES/handover-check.git"
+  },
+  "homepage": "https://innerluxes.dev/software-development/outsourced-product-development"
+}
